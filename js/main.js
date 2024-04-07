@@ -1,5 +1,4 @@
 function prayerTimes(latitude, longitude) {
-  // mengammbil data jadwal waktu sholat dari API Aladhan
   fetch('http://api.aladhan.com/v1/calendar?latitude=' + latitude + '&longitude=' + longitude + '&method=4')
     .then((response) => response.json()) // Ubah respons dari API menjadi format JSON
     .then(function (response) {
@@ -23,9 +22,9 @@ function prayerTimes(latitude, longitude) {
       table.appendChild(tableTbody);
       app.appendChild(table);
 
-      /*       console.log(data);
+      console.log(data); // data response API pada console
       console.log(today, date);
-      console.log(response.data[today]); */
+      console.log(response.data[today]);
     });
 }
 
